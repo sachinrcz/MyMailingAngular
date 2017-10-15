@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FlexLayoutModule } from '@angular/flex-layout'; 
+import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -14,6 +14,8 @@ import { ServicesComponent } from './services/services.component';
 import { FeaturesComponent } from './features/features.component';
 import { ContactComponent } from './contact/contact.component';
 
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,8 +30,11 @@ import { ContactComponent } from './contact/contact.component';
   ],
   imports: [
     MaterialModule,
+    BrowserAnimationsModule,
     BrowserModule,
     FlexLayoutModule,
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
