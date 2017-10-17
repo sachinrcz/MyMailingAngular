@@ -16,6 +16,10 @@ import { ContactComponent } from './contact/contact.component';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import {ReactiveFormsModule} from '@angular/forms';
+import {RestangularModule, Restangular} from 'ngx-restangular';
+import {RestangularConfigFactory} from './shared/restconfig';
+
+import { ContactService } from './shared/contact.service';
 
 @NgModule({
   declarations: [
@@ -34,9 +38,10 @@ import {ReactiveFormsModule} from '@angular/forms';
     BrowserModule,
     FlexLayoutModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RestangularModule.forRoot(RestangularConfigFactory)
   ],
-  providers: [],
+  providers: [ContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
