@@ -67,7 +67,10 @@ export class ContactComponent implements OnInit {
     // console.log(this.feedback);
     this.showForm = false;
     this.feedbackService.submitContact(this.feedback)
-      .subscribe(message => {this.message = message; console.log(message)});
+      .subscribe(response => {
+		this.message = response.result; 
+		console.log(message)
+	});
   }
 
   onValueChanged(data?: any) {

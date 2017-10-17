@@ -8,7 +8,7 @@ export class ContactService {
 
   constructor(private restangular: Restangular) { }
 
-  submitContact(feedback: Feedback): Observable<string> {
+  submitContact(feedback: Feedback): Observable<JSON> {
 
         return this.restangular.all('submit').post(feedback);
 
