@@ -69,7 +69,7 @@ export class ContactComponent implements OnInit {
     this.feedbackService.submitContact(this.feedback)
       .subscribe(response => {
 		this.message = response.result; 
-		console.log(message)
+		console.log(response)
 	});
   }
 
